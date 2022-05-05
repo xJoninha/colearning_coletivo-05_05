@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Produtos
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #c4c4c4;
+    }
+    h1 {
+      margin-bottom: 50px;
+    }
+    main {
+      display: flex;
+      gap: 20px;
+      width: 90%;
+      flex-wrap: wrap;
+    }
+    .produto {
+      width: 100px;
+      height: auto;
+      padding: 10px;
+      background-color: #fff;
+    }
+    img {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Produtos Disponíveis</h1>
+
+  <main>
+    <% for (produto of produtos) { %>
+      <div class="produto">
+        <img src="<%= produto.imagem %>" alt="Mouse">
+        <h2>
+          <%= produto.nome_produto %>
+        </h2>
+        <p>
+          <%= produto.descricao %>
+        </p>
+      </div>
+      <% } %>
+  </main>
+</body>
+
+</html>
